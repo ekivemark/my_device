@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans 'Django site admin' %}{% endblock %}
+{% block extrahead %}
+    <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ APPLICATION_TITLE }}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link href="fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type="text/css" />
+    <link href="netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/static/Content/icon/favicon.ico" type="image/x-icon">
+
+{% endblock %}
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'home' %}">{% trans 'Home: ' %}</a>
+    <a href="{% url 'admin:index' %}">{% trans 'Django Administration' %}</a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

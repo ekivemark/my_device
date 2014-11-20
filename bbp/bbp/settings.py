@@ -175,7 +175,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     # Use a context processor to enable frequently used settings variables
     # to be used in templates
     'django.contrib.auth.context_processors.auth',
-    'settings_context_processor.settings',
+    'bbp.settings_context_processor.settings',
 )
 
 # Default settings for bootstrap 3
