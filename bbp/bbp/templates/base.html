@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="BlueButtonPlus OAuth2 Framework Prototype">
+    <title>{{ APPLICATION_TITLE }}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional: Include the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link href="fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -200px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 120px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+    </style>
+</head>
+
+<!-- #### Start of Body -->
+<body>
+<!-- Page Header --->
+<div id="wrap">
+<nav class="navbar navbar navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a href="/"><img src="/static/content/img/bluebutton-text-logo-2013.png" style="height:50px" alt="{{ APPLICATION_TITLE }}" /></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                </li>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Contact</a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+
+</nav>
+
+<!--- End of Header --->
+
+<!--- ######## main body section using bootstrap 12 block grid system --->
+
+<!--- landing-page block --->
+    {% block landing-page %}{% endblock %}
+<!--- End of landing-page block --->
+</div>
+
+      <div id="push"></div>
+    </div>
+
+
+<!-- Footer --->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://facebook.com/ekivemark" target="_blank"><i class="fa fa-facebook-square 4x"></i></a></li>
+
+                    <li><a href="https://twitter.com/ekivemark" target="_blank" class="icon-twitter"><i class="fa fa-twitter 4x"></i></a></li>
+                    <li><a href="http://www.linkedin.com/in/marks" target="_blank" class="icon-linkedin"><i class="fa fa-linkedin-square 4x"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+
+                    <li><a href="/terms">Terms</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="http://blog.ekivemark.com">Blog</a></li>
+                </ul>
+        </div>
+        <div class="row">
+            <h4>Get Your Data. Put it to use.</h4>
+            <div class="copyright small">
+                Copyright &copy; 2014, Mark Scrimshire. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+<!--- This javascript ads csrf protection to ajax calls --->
+    <script>
+        // This function gets cookie with a given name
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+/*
+The functions below will create a header with csrftoken
+*/
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+function sameOrigin(url) {
+    // test that a given url is a same-origin URL
+    // url could be relative or scheme relative or absolute
+    var host = document.location.host; // host + port
+    var protocol = document.location.protocol;
+    var sr_origin = '//' + host;
+    var origin = protocol + sr_origin;
+    // Allow absolute or scheme relative URLs to same origin
+    return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+        (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+        // or any other URL that isn't scheme relative or absolute i.e relative.
+        !(/^(\/\/|http:|https:).*/.test(url));
+}
+
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+            // Send the token to same-origin, relative URLs only.
+            // Send the token only if the method warrants CSRF protection
+            // Using the CSRFToken value acquired earlier
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+    </script>
+
+</body>
+</html>

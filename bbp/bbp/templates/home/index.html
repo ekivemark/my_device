@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+{% block landing-page %}
+
+<!--- ######## Welcome banner --->
+<div class="container">
+    <div class="row sub-header">
+        <div class="col-lg-8 col-md-8 col-sm-9 col-xs-7">
+            <h1>Welcome, {{ user.first_name }}</h1>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-5">
+        </div>
+    </div>
+
+<div class="landing-page">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="white-panel one-panel">
+                    <div class="tile-title">
+                      <span class="profile-icon icon-header"></span>
+                        <span>{{ APPLICATION_TITLE}}</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="tile-body">
+
+                        <p>Welcome!</p>
+{% for m in modules %}
+    <p><a href="/{{ m }}">{{ m.upper }}</a></p>
+
+{% endfor %}
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</div>
+
+{% endblock %}
+

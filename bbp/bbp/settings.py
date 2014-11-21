@@ -57,6 +57,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bootstrap3',
     'bootstrap_themes',
+    # https://django-oauth2-provider.readthedocs.org/en/latest/getting_started.html
+    #'provider',
+    #'provider.oauth2',
+    # http://django-oauth-toolkit.readthedocs.org/en/latest/tutorial/tutorial_01.html
+    'oauth2_provider',
+    'corsheaders',
 
 )
 
@@ -68,7 +74,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 )
+
+# http://django-oauth-toolkit.readthedocs.org/en/latest/tutorial/tutorial_01.html
+# Allow CORS requests from all domains (just for the scope of this tutorial):
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 ROOT_URLCONF = 'bbp.urls'
 
@@ -143,7 +155,6 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     MAIN_STATIC_ROOT,
-    # STATIC_ROOT,
     # '/Users/mark/PycharmProjects/virtualenv/rb/rainbowbutton/static',
 )
 
@@ -168,6 +179,14 @@ TEMPLATE_VISIBLE_SETTINGS = {
     'DEBUG',
     'TEMPLATE_DEBUG',
     'APPLICATION_TITLE',
+
+}
+
+TEMPLATE_MODULES = {
+    # Put the names of custom modules in this section
+    # This will be used by home.index to display a list of modules
+    # that can be called
+    'None',
 
 }
 
