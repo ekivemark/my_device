@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9297f33-41e6-423f-9be9-576002919193" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/home/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/home/contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/home/faq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/home/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/registration/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/home/privacy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/home/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bbp/bbp/templates/home/terms.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbp/db/db.db" afterPath="$PROJECT_DIR$/bbp/db/db.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bbp_oa.iml" afterPath="$PROJECT_DIR$/.idea/bbp_oa.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbp/bbp/settings.py" afterPath="$PROJECT_DIR$/bbp/bbp/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbp/bbp/urls.py" afterPath="$PROJECT_DIR$/bbp/bbp/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbp/bbp/views.py" afterPath="$PROJECT_DIR$/bbp/bbp/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -44,8 +32,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bbp/bbp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="962" max-vertical-offset="4755">
-              <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2657" max-vertical-offset="4875">
+              <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
               <folding>
                 <element signature="e#317#326#0" expanded="true" />
               </folding>
@@ -63,20 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bbp/bbp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17942584" vertical-offset="0" max-vertical-offset="555">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
               <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="response.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="response.py" pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/.virtualenvs/bbp/lib/python2.7/site-packages/django/http/response.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4515" max-vertical-offset="7290">
+            <state vertical-scroll-proportion="6.0645933" vertical-offset="4515" max-vertical-offset="7290">
               <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -112,11 +100,21 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bbp/bbp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="467" max-vertical-offset="885">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
               <folding>
                 <element signature="e#20#94#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bbp/bbp/templates/home/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0" vertical-offset="285" max-vertical-offset="840">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,16 +139,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="terms.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bbp/bbp/templates/home/terms.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5" vertical-offset="249" max-vertical-offset="660">
-              <caret line="27" column="78" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -168,21 +156,21 @@
         <option value="$PROJECT_DIR$/bbp/bbp/templates/home/about.html" />
         <option value="$PROJECT_DIR$/bbp/bbp/templates/home/faq.html" />
         <option value="$PROJECT_DIR$/bbp/bbp/templates/base.html" />
-        <option value="$PROJECT_DIR$/bbp/bbp/templates/home/index.html" />
         <option value="$PROJECT_DIR$/bbp/bbp/templates/home/contact.html" />
         <option value="$PROJECT_DIR$/bbp/bbp/templates/home/terms.html" />
         <option value="$PROJECT_DIR$/bbp/bbp/templates/home/privacy.html" />
         <option value="$USER_HOME$/.virtualenvs/bbp/lib/python2.7/site-packages/provider/views.py" />
-        <option value="$PROJECT_DIR$/bbp/bbp/settings.py" />
         <option value="$PROJECT_DIR$/bbp/bbp/templates/home/profile.html" />
-        <option value="$PROJECT_DIR$/bbp/bbp/views.py" />
         <option value="$PROJECT_DIR$/bbp/bbp/urls.py" />
+        <option value="$PROJECT_DIR$/bbp/bbp/templates/home/index.html" />
+        <option value="$PROJECT_DIR$/bbp/bbp/settings.py" />
+        <option value="$PROJECT_DIR$/bbp/bbp/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="27" />
-    <option name="y" value="156" />
+    <option name="x" value="483" />
+    <option name="y" value="42" />
     <option name="width" value="1150" />
     <option name="height" value="757" />
   </component>
@@ -479,32 +467,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbp_oa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbp_oa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bbp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -760,7 +722,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="27" y="156" width="1150" height="757" extended-state="0" />
+    <frame x="483" y="42" width="1150" height="757" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1173,14 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bbp/bbp/templates/home/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.291667" vertical-offset="431" max-vertical-offset="840">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bbp/bbp/templates/home/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.75" vertical-offset="195" max-vertical-offset="630">
@@ -1204,34 +1158,6 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/bbp/lib/python2.7/site-packages/django/http/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4515" max-vertical-offset="7290">
-          <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bbp/bbp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="962" max-vertical-offset="4755">
-          <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
-          <folding>
-            <element signature="e#317#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bbp/bbp/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.291667" vertical-offset="416" max-vertical-offset="855">
-          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,21 +1187,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bbp/bbp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bbp/bbp/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.291667" vertical-offset="416" max-vertical-offset="855">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bbp/bbp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2657" max-vertical-offset="4875">
+          <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
+          <folding>
+            <element signature="e#317#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bbp/bbp/templates/home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="285" max-vertical-offset="840">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bbp/bbp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="467" max-vertical-offset="885">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="e#20#94#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bbp/bbp/urls.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/bbp/lib/python2.7/site-packages/django/http/response.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17942584" vertical-offset="0" max-vertical-offset="555">
-          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
-          <folding />
+        <state vertical-scroll-proportion="6.0645933" vertical-offset="4515" max-vertical-offset="7290">
+          <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -186,7 +186,15 @@ TEMPLATE_MODULES = {
     # Put the names of custom modules in this section
     # This will be used by home.index to display a list of modules
     # that can be called
-    'None',
+    'privacy',
+    'about',
+    'contact',
+    'terms',
+    'faq',
+    'admin',
+    'accounts/profile',
+    'accounts/logout',
+    'accounts/login',
 
 }
 

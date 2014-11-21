@@ -12,37 +12,32 @@ from django.http import HttpResponse, Http404
 #@login_required(login_url='/#modallogin', redirect_field_name='/home/')
 def home(request):
 
-    context = {'modules': CONFIG.TEMPLATE_MODULES,}
+    context = {'modules': sorted(CONFIG.TEMPLATE_MODULES),}
     return render_to_response('home/index.html', RequestContext(request, context))
 
 def about(request):
 
-    context = {'modules': CONFIG.TEMPLATE_MODULES,
-               'PAGE_TITLE': 'About',}
+    context = {'PAGE_TITLE': 'About',}
     return render_to_response('home/about.html', RequestContext(request, context))
 
 def faq(request):
 
-    context = {'modules': CONFIG.TEMPLATE_MODULES,
-               'PAGE_TITLE': 'Frequently Asked Questions',}
+    context = {'PAGE_TITLE': 'Frequently Asked Questions',}
     return render_to_response('home/faq.html', RequestContext(request, context))
 
 def contact(request):
 
-    context = {'modules': CONFIG.TEMPLATE_MODULES,
-               'PAGE_TITLE': 'Contact Us',}
+    context = {'PAGE_TITLE': 'Contact Us',}
     return render_to_response('home/contact.html', RequestContext(request, context))
 
 def terms(request):
 
-    context = {'modules': CONFIG.TEMPLATE_MODULES,
-               'PAGE_TITLE': 'Terms of Use',}
+    context = {'PAGE_TITLE': 'Terms of Use',}
     return render_to_response('home/terms.html', RequestContext(request, context))
 
 def privacy(request):
 
-    context = {'modules': CONFIG.TEMPLATE_MODULES,
-               'PAGE_TITLE': 'Your Privacy Comes First',}
+    context = {'PAGE_TITLE': 'Your Privacy Comes First',}
     return render_to_response('home/privacy.html', RequestContext(request, context))
 
 @login_required()
