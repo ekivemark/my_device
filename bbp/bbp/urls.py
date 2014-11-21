@@ -18,7 +18,8 @@ urlpatterns = patterns('',
     url(r'^accounts/profile/$', 'bbp.views.profile', name='profile'),
 
 
-
+    url(r'^secret$', 'bbp.views.secret_page', name='secret'),
+    # http://django-oauth-toolkit.readthedocs.org/en/latest/tutorial/tutorial_03.html
 
     # OAuth2 Provider
     # url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')),
