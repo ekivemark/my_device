@@ -4,6 +4,8 @@ from django.template import Template, Context, RequestContext
 from django.conf import settings as CONFIG
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from oauth2_provider.views.generic import ProtectedResourceView
+
 
 # Create your views here.
 from django.http import HttpResponse, Http404
@@ -47,3 +49,8 @@ def profile(request):
 
     context = {'PAGE_TITLE': 'User Profile', }
     return render_to_response('home/profile.html', RequestContext(request, context))
+
+
+class ApiEndpoint(ProtectedResourceView):
+    def get(self, request, *args, **kwargs):
+        return HttpResponse('Hello, OAuth2!')
