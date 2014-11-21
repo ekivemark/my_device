@@ -14,3 +14,14 @@ The packages required are listed in:
 
 ./bbp/config/requirements.txt
 
+
+Important:
+
+django/http/response.py causes an error in OAuth2 authentication.
+
+The issue is that in Django 1.7 the http/response.py changed from
+using mimetype to content_type.
+
+OAuth2 will work if you patch any reference to mimetype to content_type.
+
+
