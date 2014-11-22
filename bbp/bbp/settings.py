@@ -63,6 +63,7 @@ INSTALLED_APPS = (
     # http://django-oauth-toolkit.readthedocs.org/en/latest/tutorial/tutorial_01.html
     'oauth2_provider',
     'corsheaders',
+    'rest_framework',
 
 )
 
@@ -271,6 +272,24 @@ BOOTSTRAP3 = {
         'inline': 'bootstrap3.renderers.InlineFieldRenderer',
     },
 }
+
+# http://django-oauth-toolkit.readthedocs.org/en/latest/rest-framework/getting_started.html
+OAUTH2_PROVIDER = {
+    # this is the list of available scopes
+    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'}
+}
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.ext.rest_framework.OAuth2Authentication',
+    ),
+        'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+
+}
+
 
 # @login_required defaults to using settings.LOGIN_URL
 # if login_url= is not defined
