@@ -30,4 +30,11 @@ using mimetype to content_type.
 
 OAuth2 will work if you patch any reference to *mimetype* to *content_type*.
 
+# oauth2 testing
+
+Using curl to test the OAuth2 provider can hit issues resulting in 
+{"error": "invalid_client"} or a bash error. The cause is the 
+appearance of special characters ($ : = ). You can escape them with a
+\ prefix. The other alternative is to replace the Client ID and 
+Client Secret with character strings that avoid special characters.
 

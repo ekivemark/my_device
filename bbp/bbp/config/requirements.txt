@@ -2,3 +2,5 @@ django
 django-bootstrap3
 django-admin-bootstrapped
 django-bootstrap-themes
+django-oauth-toolkit
+djangorestframework

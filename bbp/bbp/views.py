@@ -4,6 +4,7 @@ from django.template import Template, Context, RequestContext
 from django.conf import settings as CONFIG
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.http.response import HttpResponse
 from oauth2_provider.views.generic import ProtectedResourceView
 
 
@@ -54,3 +55,7 @@ def profile(request):
 class ApiEndpoint(ProtectedResourceView):
     def get(self, request, *args, **kwargs):
         return HttpResponse('Hello, OAuth2!')
+
+@login_required()
+def secret_page(request, *args, **kwargs):
+    return HttpResponse('You found the Secret contents!', status=200)
