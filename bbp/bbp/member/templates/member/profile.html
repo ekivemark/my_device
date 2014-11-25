@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+{% block landing-page %}
+<div class="landing-page">
+        <div class="row">
+
+ <div class="container">
+    <div class="row sub-header">
+        <div class="col-lg-8 col-md-8 col-sm-9 col-xs-7">
+            <h1>{{ PAGE_TITLE }}</h1>
+        </div>
+     </div>
+       <div>
+           <p>User profile will be displayed here.</p>
+           <p>Username: {{ user.username }} </p>
+           <p>GUID: {{ user.member.member_guid }}</p>
+           <p>Token: {{ user.member.user_token }}</p>
+        </div>
+
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}
+

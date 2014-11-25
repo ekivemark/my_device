@@ -1,8 +1,11 @@
-bbp_oa (BlueButton Plus with OAuth 2.0)
+My Device 
 ======
 
 This is a prototype application to create a framework for 
-distributing BlueButtonPlus data via an OAuth2.0 controlled API.
+integration with the Validic Device integration platform
+
+The application skeleton is based on:
+https://github.com/ekivemark/bbp_oa
 
 This application is written using:
 

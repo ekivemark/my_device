@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http.response import HttpResponse
 from oauth2_provider.views.generic import ProtectedResourceView
+import requests
+import simplejson
 
 
 # Create your views here.
@@ -59,3 +61,5 @@ class ApiEndpoint(ProtectedResourceView):
 @login_required()
 def secret_page(request, *args, **kwargs):
     return HttpResponse('You found the Secret contents!', status=200)
+
+

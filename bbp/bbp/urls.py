@@ -41,6 +41,10 @@ urlpatterns = patterns('',
     url(r'^terms/$', 'bbp.views.terms', name='terms'),
     url(r'^privacy/$', 'bbp.views.privacy', name='privacy'),
 
+    # Link in subsidiary modules
+    url(r'^device/', include('device.urls', namespace='device')),
+    url(r'^member/', include('bbp.member.urls', namespace='member')),
+
     # Account profile page (login_required)
     url(r'^accounts/profile/$', 'bbp.views.profile', name='profile'),
 

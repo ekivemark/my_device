@@ -26,7 +26,7 @@ TEMPLATE_DEBUG = True
 # Use this to review Settings at run time
 DEBUG_SETTINGS = True
 
-APPLICATION_TITLE="BlueButtonPlus"
+APPLICATION_TITLE="MedYear:Device"
 
 if DEBUG_SETTINGS:
     print "Application: %s" % APPLICATION_TITLE
@@ -64,6 +64,8 @@ INSTALLED_APPS = (
     'oauth2_provider',
     'corsheaders',
     'rest_framework',
+    'device',
+    'bbp.member',
 
 )
 
@@ -325,6 +327,12 @@ LOGGING = {
     }
 }
 
+# Validic Device Integration
+# Organization ID and Token are set in local_settings.py
+V_ORG_ID = 'fake_value'
+V_ACCESS_TOKEN = 'fake_token'
+VALIDIC_API = "https://api.validic.com/v1/"
+
 
 # Make this unique, and don't share it with anybody.
 # Setting a false value here and will overwrite using value in local_settings.py
@@ -342,6 +350,7 @@ except Exception as e:
 
 if DEBUG_SETTINGS:
     print "SECRET_KEY:%s" % SECRET_KEY
+    print "Validic_Org_ID:%s" % V_ORG_ID
     print "================================================================"
 # SECURITY WARNING: keep the secret key used in production secret!
 

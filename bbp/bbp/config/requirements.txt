@@ -4,3 +4,4 @@ django-admin-bootstrapped
 django-bootstrap-themes
 django-oauth-toolkit
 djangorestframework
+django-cors-headers
