@@ -1,22 +1,15 @@
 __author__ = 'mark'
+"""
+User Profile Extension based on One-to-One fields code in Django Docs here:
+https://docs.djangoproject.com/en/1.7/topics/auth/customizing/
+"""
 from django.db import models
-import datetime
-from django.utils import timezone
 from django.contrib.auth.models import User
-
+from uuid import uuid4
 
 class Member(models.Model):
-    member = models.ForeignKey(User, unique=True)
-    member_guid = models.CharField(max_length=200, blank=True, null=True)
-    user_token = models.CharField(max_length=200, blank=True, null=True)
-
-
-    def __str__(self):              # __un
-    # icode__ on Python 2
-
-        return self.member_guid
-
-User.member = property(lambda u:Member.objects.get_or_create(member=u)[0])
-
-
+    user = models.OneToOneField(User)
+    member_guid = models.CharField(max_length=100, null=True, blank=True)
+    ext_uid = models.CharField(max_length=100, null=True, blank=True)
+    user_token = models.CharField(max_length=100, null=True, blank=True)
 

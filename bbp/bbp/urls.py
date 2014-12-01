@@ -45,9 +45,6 @@ urlpatterns = patterns('',
     url(r'^device/', include('device.urls', namespace='device')),
     url(r'^member/', include('bbp.member.urls', namespace='member')),
 
-    # Account profile page (login_required)
-    url(r'^accounts/profile/$', 'bbp.views.profile', name='profile'),
-
     # API test -(login_required)
     url(r'^secret$', 'bbp.views.secret_page', name='secret'),
     # http://django-oauth-toolkit.readthedocs.org/en/latest/tutorial/tutorial_03.html

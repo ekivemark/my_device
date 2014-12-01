@@ -45,14 +45,6 @@ def privacy(request):
     context = {'PAGE_TITLE': 'Your Privacy Comes First',}
     return render_to_response('home/privacy.html', RequestContext(request, context))
 
-@login_required()
-def profile(request):
-    u = User(username=request.user)
-    print "User: %s" % u.username
-
-    context = {'PAGE_TITLE': 'User Profile', }
-    return render_to_response('home/profile.html', RequestContext(request, context))
-
 
 class ApiEndpoint(ProtectedResourceView):
     def get(self, request, *args, **kwargs):

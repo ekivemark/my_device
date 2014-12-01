@@ -15,14 +15,42 @@
  <div class="container">
     <div class="row sub-header">
         <div class="col-lg-8 col-md-8 col-sm-9 col-xs-7">
-            <h1>{{ PAGE_TITLE }}</h1>
+            <h1>{{ PAGE_TITLE }}: {{ user.first_name }} {{ user.last_name }}</h1>
         </div>
      </div>
        <div>
-           <p>User profile will be displayed here.</p>
-           <p>Username: {{ user.username }} </p>
-           <p>GUID: {{ user.member.member_guid }}</p>
-           <p>Token: {{ user.member.user_token }}</p>
+           <p>Username: {{ user.email }} :
+           Name: {{ user.first_name }} {{ user.last_name }} (GUID: {{ user.member.member_guid }}) </p>
+           <p>External UserID: {{ user.member.ext_uid }}  Token: {{ user.member.user_token }}</p>
+           <div class="row">
+          {% for app in MARKETPLACE %}
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="white-panel one-panel">
+                    <div class="tile-title">
+                      <span class="profile-icon icon-header"></span>
+                        <span>{{ app.name }}</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="tile-body">
+
+                        <p><img src="{{ IMG_SERVER }}{{ app.logo_url }}" width="60"> </p>
+                        <p>{{ app.excerpt }}</p>
+                        <p><a href="{{ app.sync_url }}" target="_blank" >Sync with {{ app.name }}</a></p>
+                        <p>Available on:
+                        {% for type in app.platform_types %}
+                            {{ type }}
+                        {% endfor %}
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+           {% endfor %}
+
+        </div>
+
+
         </div>
 
                 </div>

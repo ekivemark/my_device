@@ -66,6 +66,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'device',
     'bbp.member',
+    'bbp.member.vutils',
 
 )
 
@@ -76,6 +77,8 @@ AUTHENTICATION_BACKENDS = (
     #'...',
 )
 
+# https://docs.djangoproject.com/en/1.7/topics/auth/customizing/#a-full-example
+#AUTH_USER_MODEL = 'member.MyUser'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -204,7 +207,8 @@ TEMPLATE_MODULES = {
     'terms',
     'faq',
     'admin',
-    'accounts/profile',
+    'member/view',
+    'member/get_id',
     'accounts/logout',
     'accounts/login',
 
@@ -329,8 +333,13 @@ LOGGING = {
 
 # Validic Device Integration
 # Organization ID and Token are set in local_settings.py
+# V_Secure = True of False. Used to determine http: or https: prefix
+V_SECURE = True
 V_ORG_ID = 'fake_value'
 V_ACCESS_TOKEN = 'fake_token'
+V_SERVER = "api.validic.com"
+# Optional port number
+# V_PORT = 443
 VALIDIC_API = "https://api.validic.com/v1/"
 
 
